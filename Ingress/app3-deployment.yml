@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app3-bhanu-deployment
+  labels:
+    app: app3-deploy 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app3-deploy 
+  template:
+    metadata:
+      labels:
+        app: app3-deploy 
+    spec:
+      containers:
+        - name: app3-deploy 
+          image: bhanuprakash2710/htmlpage:v1
+          ports:
+            - containerPort: 80

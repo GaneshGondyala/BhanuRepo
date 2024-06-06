@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app3-bhanu-clusterip-service
+  labels:
+    app: app3-deploy 
+  annotations:
+spec:
+  type: ClusterIP
+  selector:
+    app: app3-deploy 
+  ports:
+    - port: 80
+      targetPort: 80
+
+             
